@@ -1,0 +1,6 @@
+1. Create a random number generator 
+2. Make a scoreboard including wins and losses
+3. If number is equal to random number generator, user wins 1 pt
+4. If user goes over number then user gains a loss
+5. Generate 4 crystal buttons that'll contain the same number that's randomly generated after each round
+6. Create a scoreboard that'll contain the user's sum when crystals are clicked
