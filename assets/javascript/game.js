@@ -1,7 +1,3 @@
-// ![Crystal Collector](Images/1-CrystalCollector.jpg)
-
-// 1. [Watch the demo](https://youtu.be/yNI0l2FMeCk).
-
 // 2. The player will have to guess the answer, just like in Word Guess. This time, though, the player will guess with numbers instead of letters. 
 
 // 3. Here's how the app works:
@@ -30,4 +26,9 @@
 // * The random number shown at the start of the game should be between 19 - 120.
 
 // * Each crystal should have a random hidden value between 1 - 12.
+
+var winsText = document.getElementById("wins")
+var lossesText = document.getElementById("losses")
+var totalScoreText = document.getElementById("total-score")
+
 
