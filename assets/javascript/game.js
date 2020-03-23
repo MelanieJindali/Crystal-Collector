@@ -6,13 +6,29 @@ $(document).ready(function() {
     $("#target-num").html(targetNumber);
     }
 
+    // Calling the randomNum function
+    randomNum();
+
     // totalScore starting at 0
     var totalScore = 0;
-    $("#total-score").text(totalScore);
+    $("#total-score").html(totalScore);
 
     var wins = 0;
     var losses = 0;
-  
+
+   // Recording wins and losses
+    function scoreBoard() {
+        if (totalScore === targetNumber) {
+            alert("We have a winner!");
+            wins++;
+
+        } else (totalScore > targetNumber); {
+            alert("Boo, you went over the target number!");
+            losses++;
+        }
+    };
+
+
     // Crystals will generate numbers between 1 and 12
     var amethyst = Math.floor(Math.random() * 12) + 1;
     var sapphire = Math.floor(Math.random() * 12) + 1;
@@ -38,7 +54,10 @@ $(document).ready(function() {
     $("#peridot").on('click', function() {
         totalScore = totalScore + peridot
             $('#total-score').html(totalScore);                     
-    });       
+    });
+    
+   scoreBoard();
+
 
 });
 
