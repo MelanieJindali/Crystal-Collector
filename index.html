@@ -5,20 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/reset.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Crystal Collector Game</title>
 </head>
 <body>
+    
     <h1>The Crystal Collector Game!</h1>
 
-    <p>A random number will be given to you at the beginming of the game.</p>
-    <p>There are 4 crystals below. By clicking one of them, you will add a specific amount of points to your total score.</p>
-    <p>Win the game by matching your total score with the random number. If you go over the random number, you will lose the game.</p>
-    <p>The value of the crystal is a mystery number until you click it.</p>
+    <div>
+    <p>A random number will be given to you at the beginming of the game.</p><br>
+    <p>There are 4 crystals below. By clicking one of them, you will add a specific amount of points to your total score.</p><br>
+    <p>Win the game by matching your total score with the random number. If you go over the random number, you will lose the game.</p><br>
+    <p>The value of the crystal is a mystery number until you click it.</p><br>
     <p>* Each time the game restarts, the values of the crystals will change.</p>
+    </div>
 
     <div id="wins"></div>
     <div id="losses"></div>
     <div id="total-score"></div>
+
+    <h1 id="random-num">Try to match this number:</h1>
+    <div id="amethyst"></div>
+    <div id="sapphire"></div>
+    <div id="opal"></div>
+    <div id="peridot"></div>
 
 
 
