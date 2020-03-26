@@ -9,27 +9,51 @@ $(document).ready(function() {
     // Calling the randomNum function
     randomNum();
 
-    // totalScore starting at 0
+    // totalScore, wins & losses starting at 0
     var totalScore = 0;
     $("#total-score").html(totalScore);
 
     var wins = 0;
-    $("#wins").html(wins)
+    $("#wins").html(wins);
 
     var losses = 0;
-    $("#losses").html(losses)
+    $("#losses").html(losses);
+    
 
     // Recording wins and losses
     function scoreBoard() {
         if (totalScore === targetNumber) {
-            wins++;
             alert("We have a winner!");
+            wins++;
+            $("#wins").html(wins);
+
+            reset();           
 
         } else (totalScore > targetNumber); {
-            losses++;
             alert("Oh no! You went over the target number!");
+            losses++;
+            $("#losses").html(losses);
+
+            reset();           
         }
     };
+
+    // Reset the score of the game
+    function reset() {
+        totalScore = 0;
+        $("#total-score").html(totalScore);
+
+        resetNums();
+    }
+    
+    // Reset random numbers for crystals
+    function resetNums() {
+    targetNumber = Math.floor(Math.random() * 102) + 19;
+    amethyst = Math.floor(Math.random() * 12) + 1;
+    sapphire = Math.floor(Math.random() * 12) + 1;
+    opal = Math.floor(Math.random() * 12) + 1;
+    peridot = Math.floor(Math.random() * 12) + 1;
+    }
 
 
     // Crystals will generate numbers between 1 and 12
@@ -41,54 +65,33 @@ $(document).ready(function() {
     // Set functionality to crystals
     $("#amethyst").on('click', function() {
             totalScore = totalScore + amethyst
-            $('#total-score').html(totalScore);
-            if (totalScore === targetNumber) {
-                wins++;
-                reset();
-                resetCrytsal();
-    
-            } else (totalScore > targetNumber); {
-                losses++;
-                reset();
-                resetCrytsal();
-            }
-            $('#total-score').html(totalScore);
-    });        
+                $('#total-score').html(totalScore);
+
+                scoreBoard();
+                      
+    })        
 
     $("#sapphire").on('click', function() {
-        totalScore = totalScore + sapphire
-            $('#total-score').html(totalScore);
-    });        
+            totalScore = totalScore + sapphire
+                $('#total-score').html(totalScore);
+
+                scoreBoard();
+                               
+    })       
 
     $("#opal").on('click', function() {
-        totalScore = totalScore + opal
-            $('#total-score').html(totalScore);
-    });      
+            totalScore = totalScore + opal
+                $('#total-score').html(totalScore); 
+
+                scoreBoard();
+                     
+    })      
             
     $("#peridot").on('click', function() {
-        totalScore = totalScore + peridot
-            $('#total-score').html(totalScore);                     
-    });
-    
-   scoreBoard();
+            totalScore = totalScore + peridot 
+                $('#total-score').html(totalScore); 
 
-   // Reset the score of the game
-    function reset() {
-    totalScore = 0;
-    $("#total-score").text(totalScore);
-    }
-
-    // Reset random numbers for crystals
-    function resetCrytsal() {
-    targetNumber = Math.floor(Math.random() * 102) + 19;
-    amethyst = Math.floor(Math.random() * 12) + 1;
-    sapphire = Math.floor(Math.random() * 12) + 1;
-    opal = Math.floor(Math.random() * 12) + 1;
-    peridot = Math.floor(Math.random() * 12) + 1;
-    }
-
+                scoreBoard();
+                                             
+    })
 });
-
-
-
-
