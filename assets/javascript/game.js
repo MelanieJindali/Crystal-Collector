@@ -1,8 +1,11 @@
 $(document).ready(function() {
 
+    
+    var targetNumber;
+
     // targetNumber is randomly generated between 19 and 120
     function randomNum() {
-    var targetNumber = Math.floor(Math.random() * 102) + 19;
+    targetNumber = Math.floor(Math.random() * 102) + 19;
     $("#target-num").html(targetNumber);
     }
 
@@ -29,7 +32,9 @@ $(document).ready(function() {
 
             reset();           
 
-        } else (totalScore > targetNumber); {
+        } 
+        
+        else if (totalScore > targetNumber) {
             alert("Oh no! You went over the target number!");
             losses++;
             $("#losses").html(losses);
@@ -42,8 +47,8 @@ $(document).ready(function() {
     function reset() {
         totalScore = 0;
         $("#total-score").html(totalScore);
-
         resetNums();
+        randomNum();
     }
     
     // Reset random numbers for crystals
