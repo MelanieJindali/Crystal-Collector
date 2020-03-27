@@ -1,19 +1,65 @@
-h1, div {
+h1 {
+    font-family: 'Bungee Shade', cursive;
+    text-align: center;
+    font-size: 90px;
+    color: white;
+    border: 45px outset salmon;
+    padding: 25px 0px 50px 0px;
+    background-color: darksalmon;
+    margin-top: auto;
+}
+
+h3 {
+    font-family: 'Lemonada', cursive;
+    text-align: center;
+}
+
+div {
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
 
 img {
     width: 100px;
     height: 100px;
-    padding: 150px 0px 150px 0px;
+    padding: 50px 0px 50px 0px;
+}
+
+.directions {
+    border: 10px outset salmon;
+    background-color: white;
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px;
 }
 
 .crystals {
-    margin: 30px 450px 30px 450px;
+    display: flex;
+    justify-content: center;
+    width: 450px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
     background-color: white;
-    border: 5px solid tomato;
+}
 
+#match {
+    background-color: floralwhite;
+    padding: 20px;
+}
 
+#win-lose {
+    background-color: honeydew;
+    padding: 30px;
+    margin-left: 50px;
+}
+
+span {
+    display: flex;
+    float: inline-start;
+    justify-content: center;
+    margin: 60px;
 }
 
 body {
