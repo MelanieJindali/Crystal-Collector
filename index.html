@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Lemonada|Montserrat&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Crystal Collector Game</title>
 </head>
@@ -12,28 +13,13 @@
     
     <h1>The Crystal Collector Game!</h1><br>
 
-    <div>
-    <p>A random number will be given to you at the beginming of the game.</p><br>
+    <div class="directions">
+    <p>A random number will be given to you at the beginning of the game.</p><br>
     <p>There are 4 crystals below. By clicking one of them, you will add a specific amount of points to your total score.</p><br>
     <p>Win the game by matching your total score with the random number. If you go over the random number, you will lose the game.</p><br>
     <p>The value of the crystal is a mystery number until you click it.</p><br>
-    <p>* Each time the game restarts, the values of the crystals will change.</p>
+    <p><em><strong>* Each time the game restarts, the values of the crystals will change.</strong></em></p>
     </div><br>
-
-
-    <h1>Try to match this number:</h1>
-    <div id="target-num"></div>
-
-    <h1>Your current score is:</h1>
-    <div id="total-score"></div>
-
-    
-    <div>
-        <h1>Wins:</h1>
-        <div id="wins"></div>
-        <h1>Losses:</h1>
-        <div id="losses"></div>
-    </div>
 
     <div class="crystals">
         <img src="/assets/images/Amethyst.jpg" id="amethyst"></img>
@@ -41,10 +27,27 @@
         <img src="/assets/images/Opal.png" id="opal"></img>
         <img src="/assets/images/Peridot.jpg" id="peridot"></img>
     </div>
+
+    <span>
+        <div id="match">
+        <h3>Try to match this number:</h3>
+        <div id="target-num"></div>
+
+        <h3>Your current score is:</h3>
+        <div id="total-score"></div>
+        </div>
+
+        <div id="win-lose">
+        <h3>Wins:</h3>
+        <div id="wins"></div>
+        <h3>Losses:</h3>
+        <div id="losses"></div>
+        </div>
+    </span>
     
     
 
 
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
+<script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>
