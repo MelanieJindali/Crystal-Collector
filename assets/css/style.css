@@ -7,6 +7,7 @@ h1 {
     padding: 25px 0px 50px 0px;
     background-color: darksalmon;
     margin-top: auto;
+    margin-bottom: 10px;
 }
 
 h3 {
@@ -22,7 +23,7 @@ div {
 img {
     width: 100px;
     height: 100px;
-    padding: 50px 0px 50px 0px;
+    padding: 5px 0px 5px 0px;
 }
 
 .directions {
@@ -39,6 +40,8 @@ img {
     justify-content: center;
     width: 450px;
     height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
     background-color: white;
@@ -59,9 +62,9 @@ span {
     display: flex;
     float: inline-start;
     justify-content: center;
-    margin: 60px;
+    margin: 10px;
 }
 
 body {
-    background-image: url(/assets/images/Seamless-Pattern.jpg);
+    background: url('/assets/images/Seamless-Pattern.jpg');
 }
